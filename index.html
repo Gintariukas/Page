@@ -3,79 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="jquery-3.2.1.min.js"></script>
     <script src="knockout-3.4.2.debug.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Title</title>
 </head>
 <body>
 
-<div class="today">
-    <div class="today-piece  top  day"></div>
-    <div class="today-piece  middle  month"></div>
-    <div class="today-piece  middle  date"></div>
-    <div class="today-piece  bottom  year"></div>
-</div>
-<br>
-
-<table class="pull-left">
-    <tr></tr>
-</table>
-
-<div class="dropdown pull-right">
-    <button class="dropbtn">Filter</button>
-    <div class="dropdown-content">
-        <section>
-            <div class="daterangepicker-container" data-bind="daterangepicker: ,
-            daterangepickerOptions: {standalone: true}">
-            </div>
-        </section>
+<div class="container">
+    <div class="today">
+        <div class="today-piece  top  day"></div>
+        <div class="today-piece  middle  month"></div>
+        <div class="today-piece  middle  date"></div>
+        <div class="today-piece  bottom  year"></div>
     </div>
-</div>
-
-<div>
-    <div class="pull-left">
+    <div class="table" id="table">
+        <table>
+            <tr></tr>
+        </table>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Filter</button>
+        <div class="dropdown-content">
+            <section>
+                <div class="daterangepicker-container" data-bind="daterangepicker: ,
+            daterangepickerOptions: {standalone: true}">
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="form">
         <form>
-            <p>Date</p>
-            <input type="text" placeholder="Date" name="date">
-        </form>
-        <form>
-            <p>Time</p>
-            <input list="time" name="time">
-            <datalist id="time">
-                <option value="8-12">
-                <option value="12-14">
-                <option value="14-17">
-            </datalist>
-        </form>
-        <form>
-            <p>Hours</p>
-            <input list="hours" name="hours">
-            <datalist id="hours">
-                <option value="4">
-                <option value="2">
-                <option value="6">
-            </datalist>
-        </form>
-        <form>
-            <p>Project</p>
-            <input list="project" name="project">
-            <datalist id="project">
-                <option value="Project1">
-                <option value="Project2">
-                <option value="Project3">
-            </datalist>
-        </form>
-        <form>
-            <p>Tasks</p>
-            <input list="task" name="task">
-            <datalist id="task">
-                <option value="Put an image">
-                <option value="Write a paragraph about cats">
-                <option value="Add decoration buttons">
-            </datalist>
-            <input type="submit" value="Submit">
-            <input type="submit" value="Edit">
+            <div class="inputs">
+                <p>DATE</p>
+                <input type="text" name="date">
+            </div>
+            <div class="inputs">
+                <p>TIME</p>
+                <input list="time" name="time">
+                <datalist id="time">
+                    <option value="8-12">
+                    <option value="12-14">
+                    <option value="14-17">
+                </datalist>
+            </div>
+            <div class="inputs">
+                <p>HOURS</p>
+                <input list="hours" name="hours">
+                <datalist id="hours">
+                    <option value="4">
+                    <option value="2">
+                    <option value="6">
+                </datalist>
+            </div>
+            <div class="inputs">
+                <p>PROJECT</p>
+                <input list="project" name="project">
+                <datalist id="project">
+                    <option value="Project1">
+                    <option value="Project2">
+                    <option value="Project3">
+                </datalist>
+            </div>
+            <div class="inputs">
+                <p>TASKS</p>
+                <input list="task" name="task">
+                <datalist id="task">
+                    <option value="Put an image">
+                    <option value="Write a paragraph about cats">
+                    <option value="Add decoration buttons">
+                </datalist>
+            </div>
+            <input type="submit" value="EDIT">
+            <input type="submit" value="SUBMIT">
         </form>
     </div>
 </div>
